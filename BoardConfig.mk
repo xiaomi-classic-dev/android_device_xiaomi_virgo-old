@@ -55,6 +55,11 @@ TARGET_KERNEL_CONFIG               := mokee_cancro_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
+# Vendor Init
+TARGET_UNIFIED_DEVICE       := true
+TARGET_INIT_VENDOR_LIB      := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_cancro.cpp
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
 TARGET_POWERHAL_VARIANT             := qcom
