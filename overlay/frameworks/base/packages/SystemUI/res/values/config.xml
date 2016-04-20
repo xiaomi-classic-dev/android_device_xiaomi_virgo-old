@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+<resources>
+
+    <!-- Whether to enable data switch or not -->
+    <bool name="config_enableDataSwitch">true</bool>
+
+</resources>

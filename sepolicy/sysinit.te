@@ -1,0 +1,3 @@
+#============= sysinit ==============
+allow sysinit kernel:file read;
+allow sysinit system_file:file execute_no_trans;
