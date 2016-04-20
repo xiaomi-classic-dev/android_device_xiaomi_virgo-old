@@ -125,13 +125,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_5_x.xml:system/etc/mixer_paths_5_x.xml \
     $(LOCAL_PATH)/audio/mixer_paths_5_x_forte.xml:system/etc/mixer_paths_5_x_forte.xml \
     $(LOCAL_PATH)/audio/mixer_paths_auxpcm_5_x.xml:system/etc/mixer_paths_auxpcm_5_x.xml \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Bluetooth_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_General_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_General_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Global_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Global_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Handset_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Handset_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Hdmi_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Hdmi_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Headset_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Headset_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Speaker_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Speaker_cal.acdb
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_General_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Global_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Handset_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Hdmi_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Headset_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Speaker_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Speaker_cal.acdb
 
 PRODUCT_COPY_FILES += \
     device/xiaomi/virgo/configs/diracmobile_5.config:system/vendor/etc/diracmobile_5.config
