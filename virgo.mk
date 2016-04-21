@@ -133,7 +133,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/MTP/X5/MTP_X5_Speaker_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Speaker_cal.acdb
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/virgo/configs/diracmobile_5.config:system/vendor/etc/diracmobile_5.config
+    $(LOCAL_PATH)/configs/diracmobile_5.config:system/vendor/etc/diracmobile_5.config
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.pcm.enable=true
 
 # Media profile
 PRODUCT_COPY_FILES += \
