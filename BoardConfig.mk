@@ -174,4 +174,28 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         $(LOCAL_PATH)/sepolicy
 
+#Recovery
+RECOVERY_VARIANT := twrp
+
+# TWRP configuration
+DEVICE_RESOLUTION                       := 1080x1920
+BOARD_HAS_NO_REAL_SDCARD                := true
+BOARD_RECOVERY_SWIPE                    := true
+TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
+RECOVERY_GRAPHICS_USE_LINELENGTH        := true
+TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
+TARGET_RECOVERY_FSTAB                   := $(LOCAL_PATH)/twrp/fstab.qcom
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
+RECOVERY_FSTAB_VERSION                  := 2
+BOARD_NATIVE_DUALBOOT                   := true
+BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
+TW_INCLUDE_CRYPTO                       := true
+TW_NO_SCREEN_TIMEOUT                    := true
+TW_NO_SCREEN_BLANK                      := true
+TARGET_RECOVERY_QCOM_RTC_FIX            := true
+BOARD_SUPPRESS_SECURE_ERASE             := true
+BOARD_SUPPRESS_EMMC_WIPE                := true
+RECOVERY_SDCARD_ON_DATA                 := true
+
 -include vendor/xiaomi/virgo/BoardConfigVendor.mk
