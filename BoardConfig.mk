@@ -56,9 +56,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE       := true
 TARGET_INIT_VENDOR_LIB      := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_cancro.cpp
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
@@ -164,8 +162,15 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Dual sim solution in virgo
-CONFIG_EAP_PROXY_DUAL_SIM := true
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+DONT_DEXPREOPT_PREBUILTS := true
 
 # SELinux policies
 # qcom sepolicy
@@ -174,6 +179,8 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         $(LOCAL_PATH)/sepolicy
 
+# Dual sim solution in virgo
+CONFIG_EAP_PROXY_DUAL_SIM := true
 #Recovery
 RECOVERY_VARIANT := twrp
 
@@ -184,9 +191,7 @@ BOARD_RECOVERY_SWIPE                    := true
 TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
 RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
-TARGET_RECOVERY_FSTAB                   := $(LOCAL_PATH)/twrp/fstab.qcom
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
-RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
 BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"

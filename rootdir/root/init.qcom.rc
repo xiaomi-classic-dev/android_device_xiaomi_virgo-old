@@ -111,6 +111,8 @@ on boot
 
     setprop wifi.interface wlan0
 
+    exec /system/bin/sh  /system/bin/set_sensorprop.sh
+
 #   Define TCP buffer sizes for various networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
     setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
@@ -916,3 +918,9 @@ service sensorservice /system/bin/sensorservice
     user root
     group root
     disabled
+
+service wait4sensorhub /system/bin/wait4sensorhub.sh
+    class late_start
+    user root
+    group root
+    oneshot

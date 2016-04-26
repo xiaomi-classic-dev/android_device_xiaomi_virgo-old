@@ -248,7 +248,9 @@
             <Feature name="adaptive-playback" />
             <Limit name="concurrent-instances" max="2" />
         </MediaCodec>
+        <MediaCodec name="OMX.ffmpeg.dsd.decoder"    type="audio/dsd" />
+        <MediaCodec name="OMX.ffmpeg.ape.decoder" type="audio/x-ape" />
+        <MediaCodec name="OMX.ffmpeg.adpcm.decoder" type="audio/32KADPCM" />
     </Decoders>
     <Include href="media_codecs_google_video.xml" />
-        <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>

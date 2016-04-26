@@ -17,4 +17,3 @@
 /system       ext4    /dev/block/platform/msm_sdcc.1/by-name/system
 /tz           emmc    /dev/block/platform/msm_sdcc.1/by-name/tz
 /usbotg       vfat    /dev/block/platform/xhci-hcd/by-num/p1            flags=display="USB-OTG";storage;wipeingui;removable
-
