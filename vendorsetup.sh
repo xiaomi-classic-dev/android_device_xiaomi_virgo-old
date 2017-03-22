@@ -1,0 +1,2 @@
+add_lunch_combo cm_cancro-eng
+add_lunch_combo cm_cancro-userdebug
