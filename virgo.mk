@@ -189,11 +189,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8974
 
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
-
 # Misc dependency packages
 PRODUCT_PACKAGES += \
     ebtables \
