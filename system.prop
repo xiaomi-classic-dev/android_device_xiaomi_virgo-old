@@ -21,6 +21,8 @@ persist.data.qmi.adb_logmask=0
 
 vidc.debug.level=1
 
+ro.telephony.ril.config=simactivation
+
 qcom.bt.dev_power_class=1
 bluetooth.hfp.client=1
 ro.bluetooth.alwaysbleon=true
