@@ -16,13 +16,13 @@
 #
 BOARD_VENDOR := xiaomi
 
-CANCRO_PATH := device/xiaomi/cancro
+LOCAL_PATH := device/xiaomi/virgo
 
 # ReleaseTools
-TARGET_RELEASETOOLS_EXTENSIONS := $(CANCRO_PATH)/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cancro
 
-TARGET_BOARD_INFO_FILE ?= $(CANCRO_PATH)/board-info.txt
+TARGET_BOARD_INFO_FILE ?= $(LOCAL_PATH)/board-info.txt
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -60,12 +60,12 @@ BOARD_DTBTOOL_ARGS                 := -2
 # Vendor Init
 TARGET_UNIFIED_DEVICE       := true
 TARGET_INIT_VENDOR_LIB      := libinit_cancro
-TARGET_LIBINIT_DEFINES_FILE := $(CANCRO_PATH)/init/init_cancro.cpp
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_cancro.cpp
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
 TARGET_POWERHAL_VARIANT             := qcom
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(CANCRO_PATH)/power/power_ext.c
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_PATH)/power/power_ext.c
 
 # Audio
 BOARD_USES_ALSA_AUDIO                      := true
@@ -78,7 +78,7 @@ TARGET_FM_LEGACY_PATCHLOADER := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH                        := true
 BOARD_HAVE_BLUETOOTH_QCOM                   := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(CANCRO_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 QCOM_BT_USE_SMD_TTY                         := true
 BLUETOOTH_HCI_USE_MCT                       := true
 
@@ -140,7 +140,7 @@ BOARD_FLASH_BLOCK_SIZE              := 131072
 # Recovery
 RECOVERY_FSTAB_VERSION             := 2
 TARGET_RECOVERY_DENSITY            := xhdpi
-TARGET_RECOVERY_FSTAB              := $(CANCRO_PATH)/rootdir/root/fstab.qcom
+TARGET_RECOVERY_FSTAB              := $(LOCAL_PATH)/rootdir/root/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
@@ -148,13 +148,13 @@ TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness
 BOARD_USES_MOKEE_HARDWARE = true
 BOARD_HARDWARE_CLASS += \
     hardware/mokee/mkhw \
-    $(CANCRO_PATH)/mkhw
+    $(LOCAL_PATH)/mkhw
 
 # No old RPC for prop
 TARGET_NO_RPC := true
 
 # GPS HAL lives here
-TARGET_GPS_HAL_PATH         := $(CANCRO_PATH)/gps
+TARGET_GPS_HAL_PATH         := $(LOCAL_PATH)/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # Lights
@@ -188,6 +188,6 @@ DONT_DEXPREOPT_PREBUILTS := true
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-        $(CANCRO_PATH)/sepolicy
+        $(LOCAL_PATH)/sepolicy
 
--include vendor/xiaomi/cancro/BoardConfigVendor.mk
+-include vendor/xiaomi/virgo/BoardConfigVendor.mk

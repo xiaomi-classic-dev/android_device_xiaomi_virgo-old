@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),cancro)
+ifeq ($(TARGET_DEVICE),virgo)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

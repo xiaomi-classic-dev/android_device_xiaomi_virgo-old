@@ -10,4 +10,4 @@ ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 include build/core/generate_extra_images.mk
 
 # include the non-open-source counterpart to this file
--include vendor/xiaomi/cancro/AndroidBoardVendor.mk
+-include vendor/xiaomi/virgo/AndroidBoardVendor.mk
