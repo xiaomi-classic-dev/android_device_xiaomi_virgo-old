@@ -116,8 +116,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/audio/diracmobile.config:system/vendor/etc/diracmobile.config \
     $(LOCAL_PATH)/audio/diracmobile_4.config:system/vendor/etc/diracmobile_4.config \
+    $(LOCAL_PATH)/audio/diracmobile_5.config:system/vendor/etc/diracmobile_5.config \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/audio/mixer_paths_4.xml:system/etc/mixer_paths_4.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_5_x.xml:system/etc/mixer_paths_5_x.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_5_x_forte.xml:system/etc/mixer_paths_5_x_forte.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_auxpcm_5_x.xml:system/etc/mixer_paths_auxpcm_5_x.xml \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_General_cal.acdb:system/etc/acdbdata/MTP/MTP_General_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_Global_cal.acdb:system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
@@ -126,6 +130,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_Headset_cal.acdb:system/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_Speaker_cal.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_Speaker_cal_4.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_General_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Global_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Handset_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Hdmi_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Headset_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdbdata/MTP/X5/MTP_X5_Speaker_cal.acdb:system/etc/acdbdata/MTP/X5/MTP_X5_Speaker_cal.acdb \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.pcm.enable=true
 
 # Media profile
 PRODUCT_COPY_FILES += \
