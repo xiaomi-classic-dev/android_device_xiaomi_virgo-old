@@ -24,7 +24,7 @@
 
 #define BLUETOOTH_QTI_SW TRUE
 
-#define BTM_DEF_LOCAL_NAME   "Xiaomi MI3W"
+#define BTM_DEF_LOCAL_NAME   "Xiaomi Note LTE"
 // Enables Interleave scan
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT TRUE
 #define BTA_HOST_INTERLEAVE_SEARCH  TRUE

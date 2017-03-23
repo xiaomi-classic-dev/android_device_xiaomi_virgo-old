@@ -22,6 +22,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hsic.control.bt.sh \
     init.qcom.bt.sh \
+    chargeonlymode \
+    init.class_main.sh \
+    init.mdm.sh \
+    init.qcom.class_core.sh \
+    init.qcom.syspart_fixup.sh \
+    recovery_fstab.qcom \
     init.qcom.fm.sh \
     init.qcom.modem_links.sh \
     init.qcom.post_boot.sh \
