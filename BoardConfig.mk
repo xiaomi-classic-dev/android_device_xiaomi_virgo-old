@@ -178,4 +178,7 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         $(LOCAL_PATH)/sepolicy
 
+# Dual sim solution in virgo
+CONFIG_EAP_PROXY_DUAL_SIM := true
+
 -include vendor/xiaomi/virgo/BoardConfigVendor.mk
