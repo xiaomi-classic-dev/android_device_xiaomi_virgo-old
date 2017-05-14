@@ -18,6 +18,8 @@ package org.mokee.hardware;
 
 import org.mokee.internal.util.FileUtils;
 
+import java.io.File;
+
 /*
  * Disable capacitive keys
  *
@@ -32,12 +34,11 @@ public class KeyDisabler {
     private static String CONTROL_PATH = "/proc/touchscreen/nav_button_enable";
 
     public static boolean isSupported() {
-        return FileUtils.isFileReadable(CONTROL_PATH) &&
-            FileUtils.isFileWritable(CONTROL_PATH);
+        return new File(CONTROL_PATH).exists();
     }
 
     public static boolean isActive() {
-        return FileUtils.readOneLine(CONTROL_PATH).equals("0");
+        return (FileUtils.readOneLine(CONTROL_PATH).equals("0"));
     }
 
     public static boolean setActive(boolean state) {
