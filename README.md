@@ -1,4 +1,4 @@
-Copyright 2017 - The LineageOS Project
+Copyright 2017 - The Mokee Project
 
 Xiaomi Mi Note LTE
 ==============

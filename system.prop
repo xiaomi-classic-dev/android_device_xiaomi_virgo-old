@@ -15,6 +15,9 @@ persist.data.tcpackprio.enable=true
 ro.data.large_tcp_window_size=true
 persist.cne.feature=0
 
+# Maintainer
+ro.mk.maintainer=guaiyihu
+
 ro.fm.transmitter=false
 
 persist.data.qmi.adb_logmask=0
