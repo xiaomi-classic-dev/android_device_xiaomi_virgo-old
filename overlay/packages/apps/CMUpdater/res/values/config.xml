@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="conf_update_server_url_def">https://raw.githubusercontent.com/xiaomi-note-dev/CMUpdater-API/cm-14.1/virgo/api.json</string>
+</resources>
