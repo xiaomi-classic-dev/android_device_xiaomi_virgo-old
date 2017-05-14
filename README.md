@@ -1,26 +1,20 @@
-Copyright 2015 - The CyanogenMod Project
+Copyright 2017 - The LineageOS Project
 
-Xiaomi Mi3 and Mi4
+Xiaomi Mi Note LTE
 ==============
+The Xiaomi Mi Note LTE (codanamed _"Virgo"_) is a high-end smartphone from Xiaomi.
 
-The Xiaomi Mi3 (codenamed _"Cancro"_) is a high-end smartphone from Xiaomi.
+Mi Note LTE was announced in March 2015.
 
-The Xiaomi Mi4 (codanamed _"Cancro"_) is a high-end smartphone from Xiaomi.
+Basic   | Mi Note LTE
+-------:|:---------------------------------
+CPU     | 2.5GHz Quad-Core MSM8974AC
+GPU     |Adreno 330
+Memory  | 3GB RAM
+Shipped Android Version | 4.4.4
+Storage | 16/64GB
+Battery | 3080 mAh
+Display | 5.7" 1920 x 1080px
+Camera  | 13MPx, LED Flash
 
-Mi3 was announced in September 2013.
-
-Mi4 was announced in July 2014.
-
-Basic   | Mi3                               | Mi4
--------:|:---------------------------------:|------------------------------
-CPU     | 2.3GHz Quad-Core MSM8974AB        | 2.5GHz Quad-Core MSM8974AC
-GPU     | Adreno 330                        | Adreno 330
-Memory  | 2GB RAM                           | 3GB RAM
-Shipped Android Version | 4.3 up to 4.4.4   | 4.4.4
-Storage | 16/64GB                           | 16/64GB
-Battery | 3050 mAh                          | 3080 mAh
-Display | 5.0" 1920 x 1080 px               | 5.0" 1920 x 1080px
-Camera  | 13MPx, LED Flash                  | 13MPx, LED Flash
-
-![Xiaomi Mi3](http://cdn.gsmarena.com/vv/reviewsimg/xiaomi-mi-3/gal/gsmarena_004.jpg "Xiaomi Mi3 in black")
-![Xiaomi Mi4](http://t1.qpic.cn/mblogpic/316cf2876f6179885512/2000.jpg "Xiaomi Mi4 in white")
+![Xiaomi Mi Note LTE](http://imgqn.koudaitong.com/upload_files/2015/03/25/Fk0w6jE7YJippqeNOCVHLQafLp6v.jpg!730x0.jpg "Xiaomi Mi Note LTE in white")
