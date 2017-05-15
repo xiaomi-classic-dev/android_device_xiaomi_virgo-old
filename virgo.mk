@@ -172,7 +172,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw \
+    libdashplayer \
+    libstagefrighthw
 
 PRODUCT_PACKAGES += \
     audiod \
