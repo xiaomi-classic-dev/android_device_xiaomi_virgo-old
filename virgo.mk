@@ -173,6 +173,7 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libdashplayer \
+    libqcmediaplayer \
     libstagefrighthw
 
 PRODUCT_PACKAGES += \
