@@ -148,9 +148,7 @@ TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness
 
 # CM Hardware
 BOARD_USES_CM_HARDWARE = true
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(LOCAL_PATH)/cmhw
+BOARD_HARDWARE_CLASS := device/xiaomi/virgo/cmhw
 
 # No old RPC for prop
 TARGET_NO_RPC := true
