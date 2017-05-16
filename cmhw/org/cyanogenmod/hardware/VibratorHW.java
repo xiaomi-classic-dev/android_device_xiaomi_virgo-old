@@ -25,30 +25,41 @@ public class VibratorHW {
 
     private static final String TAG = "VibratorHW";
 
-    private static final int DEFAULT_LEVEL = 60;
-    private static final int MAX_LEVEL = 127;
-    private static final int MIN_LEVEL = 10;
-    private static final int WARNING_LEVEL = 85;
-    private static final String LEVEL_PATH = "/sys/vibrator/pwmvalue";
+    private static final String DEFAULT_PATH = "/sys/class/timed_output/vibrator/vtg_default";
+    private static final String LEVEL_PATH = "/sys/class/timed_output/vibrator/vtg_level";
+    private static final String MAX_PATH = "/sys/class/timed_output/vibrator/vtg_max";
+    private static final String MIN_PATH = "/sys/class/timed_output/vibrator/vtg_min";
 
     public static boolean isSupported() {
         return FileUtils.isFileWritable(LEVEL_PATH) &&
-                FileUtils.isFileReadable(LEVEL_PATH);
+                FileUtils.isFileReadable(DEFAULT_PATH) &&
+                FileUtils.isFileReadable(MAX_PATH) &&
+                FileUtils.isFileReadable(MIN_PATH);
     }
 
-    public static int getMaxIntensity()  {
-        return MAX_LEVEL;
+    public static int getMaxIntensity() {
+        try {
+            return Integer.parseInt(FileUtils.readOneLine(MAX_PATH));
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage(), e);
+        }
+        return -1;
     }
 
-    public static int getMinIntensity()  {
-        return MIN_LEVEL;
+    public static int getMinIntensity() {
+        try {
+            return Integer.parseInt(FileUtils.readOneLine(MIN_PATH));
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage(), e);
+        }
+        return -1;
     }
 
-    public static int getWarningThreshold()  {
-        return WARNING_LEVEL;
+    public static int getWarningThreshold() {
+        return -1;
     }
 
-    public static int getCurIntensity()  {
+    public static int getCurIntensity() {
         try {
             return Integer.parseInt(FileUtils.readOneLine(LEVEL_PATH));
         } catch (Exception e) {
@@ -57,11 +68,16 @@ public class VibratorHW {
         return -1;
     }
 
-    public static int getDefaultIntensity()  {
-        return DEFAULT_LEVEL;
+    public static int getDefaultIntensity() {
+        try {
+            return Integer.parseInt(FileUtils.readOneLine(DEFAULT_PATH));
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage(), e);
+        }
+        return -1;
     }
 
-    public static boolean setIntensity(int intensity)  {
+    public static boolean setIntensity(int intensity) {
         return FileUtils.writeLine(LEVEL_PATH, String.valueOf(intensity));
     }
 }
