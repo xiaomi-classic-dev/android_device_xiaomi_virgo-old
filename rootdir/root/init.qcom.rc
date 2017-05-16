@@ -340,14 +340,9 @@ on post-fs-data
     restorecon/sys/class/timed_output/vibrator/vtg_max
     restorecon/sys/class/timed_output/vibrator/vtg_min
 
-    #Mi3 Key Disabler
-    chown root system /sys/bus/i2c/drivers/atmel_mxt_ts/2-004a/keys_off
-    chmod 0664 /sys/bus/i2c/drivers/atmel_mxt_ts/2-004a/keys_off
-    restorecon /sys/bus/i2c/drivers/atmel_mxt_ts/2-004a/keys_off
-    #Mi4 and MiNote Key Disabler
-    chown root system /sys/bus/i2c/drivers/atmel_mxt_ts_640t/2-004b/keys_off
-    chmod 0664 /sys/bus/i2c/drivers/atmel_mxt_ts_640t/2-004b/keys_off
-    restorecon /sys/bus/i2c/drivers/atmel_mxt_ts_640t/2-004b/keys_off
+    # Key disabler
+    chown root system /proc/touchscreen/nav_button_enable
+    chmod 0660 /proc/touchscreen/nav_button_enable
 
     #Double tap 2 wake
     chown root system sys/android_touch/doubletap2wake
