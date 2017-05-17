@@ -97,6 +97,16 @@ on boot
     chown system system /sys/bus/i2c/devices/2-004b/hover_tune
     chown system system /sys/bus/i2c/devices/2-004b/hover_from_flash
     chown system system /sys/devices/fda0c000.qcom,cci/1c.qcom,actuator/bu63163
+    chmod 0660 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
+    chmod 0440 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
+    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
+    chmod 0660 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
+    chmod 0440 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
+    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
+    chown system system /sys/devices/fda0c000.qcom,cci/1c.qcom,actuator/bu63163
+    chown media media /sys/devices/fda0c000.qcom,cci/hid_acc_z
     exec /system/bin/sh /system/bin/atmel_hover_tune.sh
 
 
