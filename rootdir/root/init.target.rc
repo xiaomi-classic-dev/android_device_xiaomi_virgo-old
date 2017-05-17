@@ -183,7 +183,7 @@ service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    group system
    disabled
 
-service thermal-engine /system/vendor/bin/thermal-engine --config /system/etc/thermal-engine-perf.conf
+service thermal-engine /system/vendor/bin/thermal-engine
    user root
    socket thermal-send-client stream 0666 system system
    socket thermal-recv-client stream 0660 system system
