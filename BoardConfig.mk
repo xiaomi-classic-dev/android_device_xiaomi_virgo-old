@@ -55,9 +55,6 @@ TARGET_KERNEL_CONFIG               := mokee_cancro_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
-# Vendor Init
-TARGET_INIT_VENDOR_LIB      := libinit_msm
-
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
 TARGET_POWERHAL_VARIANT             := qcom
