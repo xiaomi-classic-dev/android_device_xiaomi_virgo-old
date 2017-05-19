@@ -24,7 +24,7 @@
 
 #define BLUETOOTH_QCOM_SW TRUE
 
-#define BTM_DEF_LOCAL_NAME   "Xiaomi Note Pro"
+#define BTM_DEF_LOCAL_NAME   "MI Note LTE"
 // Enables Interleave scan
 #define BTA_HOST_INTERLEAVE_SEARCH  TRUE
 // Disables read remote device feature
