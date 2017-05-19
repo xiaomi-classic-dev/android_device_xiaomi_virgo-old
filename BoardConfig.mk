@@ -131,11 +131,9 @@ TARGET_RECOVERY_FSTAB              := $(LOCAL_PATH)/rootdir/root/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
-# MK Hardware
-BOARD_USES_MOKEE_HARDWARE = true
-BOARD_HARDWARE_CLASS += \
-    $(LOCAL_PATH)/mkhw \
-    hardware/mokee/mkhw
+# CM Hardware
+BOARD_USES_CM_HARDWARE = true
+BOARD_HARDWARE_CLASS := device/xiaomi/virgo/cmhw
 
 # No old RPC for prop
 TARGET_NO_RPC := true

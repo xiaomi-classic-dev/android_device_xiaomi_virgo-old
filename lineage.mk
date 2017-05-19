@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/virgo/virgo.mk)
 
-# Inherit some common MK stuff.
-$(call inherit-product, vendor/mk/config/common_mini_phone.mk)
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
-PRODUCT_NAME := mk_virgo
+PRODUCT_NAME := lineage_virgo
 PRODUCT_DEVICE := virgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
