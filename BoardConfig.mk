@@ -133,9 +133,11 @@ BOARD_FLASH_BLOCK_SIZE              := 131072
 
 # Recovery
 RECOVERY_FSTAB_VERSION             := 2
+TARGET_RECOVERY_DENSITY            := xhdpi
 TARGET_RECOVERY_FSTAB              := $(LOCAL_PATH)/rootdir/root/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+LZMA_RAMDISK_TARGETS := recovery
 
 # CM Hardware
 BOARD_USES_CM_HARDWARE = true
@@ -185,26 +187,6 @@ BOARD_SEPOLICY_DIRS += \
 
 # Dual sim solution in virgo
 CONFIG_EAP_PROXY_DUAL_SIM := true
-#Recovery
-RECOVERY_VARIANT := twrp
 
-# TWRP configuration
-DEVICE_RESOLUTION                       := 1080x1920
-BOARD_HAS_NO_REAL_SDCARD                := true
-BOARD_RECOVERY_SWIPE                    := true
-TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
-RECOVERY_GRAPHICS_USE_LINELENGTH        := true
-TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
-TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
-BOARD_NATIVE_DUALBOOT                   := true
-BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
-TW_INCLUDE_CRYPTO                       := true
-TW_NO_SCREEN_TIMEOUT                    := true
-TW_NO_SCREEN_BLANK                      := true
-TARGET_RECOVERY_QCOM_RTC_FIX            := true
-BOARD_SUPPRESS_SECURE_ERASE             := true
-BOARD_SUPPRESS_EMMC_WIPE                := true
-RECOVERY_SDCARD_ON_DATA                 := true
 
 -include vendor/xiaomi/virgo/BoardConfigVendor.mk
