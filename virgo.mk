@@ -5,11 +5,6 @@ LOCAL_PATH := device/xiaomi/virgo
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/kernel:kernel \
-    $(LOCAL_PATH)/prebuilt/dt.img:dt.img
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \

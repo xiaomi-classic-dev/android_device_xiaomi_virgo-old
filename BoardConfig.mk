@@ -43,26 +43,16 @@ BOARD_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64 -DUSE_RIL_VE
 BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK            := $(LOCAL_PATH)/mkbootimg.mk
-BOARD_KERNEL_CMDLINE               := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=permissive buildvariant=userdebug
+BOARD_KERNEL_CMDLINE               := console=none vmalloc=340M androidboot.hardware=qcom msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT          := true
-BOARD_KERNEL_PREBUILT_DT           := true
-TARGET_PREBUILT_KERNEL             := $(LOCAL_PATH)/prebuilt/kernel
 BOARD_KERNEL_BASE                  := 0x00000000
 BOARD_KERNEL_PAGESIZE              := 2048
 BOARD_MKBOOTIMG_ARGS               := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 TARGET_KERNEL_SOURCE               := kernel/xiaomi/cancro
 TARGET_KERNEL_ARCH                 := arm
-TARGET_KERNEL_HEADER_ARCH          := arm
-TARGET_KERNEL_CONFIG               := mokee_virgo_defconfig
+TARGET_KERNEL_CONFIG               := mokee_cancro_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x0000000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --dt device/xiaomi/virgo/prebuilt/dt.img
 BOARD_DTBTOOL_ARGS                 := -2
-
-WLAN_MODULES:
-	ln -sf /system/lib/modules/pronto/pronto_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
-
-TARGET_KERNEL_MODULES += WLAN_MODULES
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
