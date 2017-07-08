@@ -54,15 +54,10 @@ BOARD_MKBOOTIMG_ARGS               := --ramdisk_offset 0x02000000 --tags_offset 
 TARGET_KERNEL_SOURCE               := kernel/xiaomi/cancro
 TARGET_KERNEL_ARCH                 := arm
 TARGET_KERNEL_HEADER_ARCH          := arm
-TARGET_KERNEL_CONFIG               := mokee_virgo_defconfig
+TARGET_KERNEL_CONFIG               := mokee_cancro_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x0000000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100 --dt device/xiaomi/virgo/prebuilt/dt.img
 BOARD_DTBTOOL_ARGS                 := -2
-
-WLAN_MODULES:
-	ln -sf /system/lib/modules/pronto/pronto_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
-
-TARGET_KERNEL_MODULES += WLAN_MODULES
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
