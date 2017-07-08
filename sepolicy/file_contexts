@@ -1,3 +1,6 @@
+/system/bin/sensorextd                                       u:object_r:sensorext_exec:s0
+/system/bin/sensorservice                                    u:object_r:sensorservice_exec:s0
+
 /data/cam_socket.*                                           u:object_r:camera_socket:s0
 /data/system/sensors                                         u:object_r:device:s0
 /data/system/sensors/settings                                u:object_r:device:s0
