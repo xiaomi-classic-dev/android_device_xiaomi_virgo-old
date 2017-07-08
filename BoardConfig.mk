@@ -74,8 +74,6 @@ BLUETOOTH_HCI_USE_MCT                       := true
 TARGET_RIL_VARIANT                := caf
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 
-KERNEL_HAS_FINIT_MODULE := false
-
 # Graphics
 USE_OPENGL_RENDERER               := true
 TARGET_CONTINUOUS_SPLASH_ENABLED  := true
