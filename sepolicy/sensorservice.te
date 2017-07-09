@@ -3,3 +3,19 @@ type sensorservice_exec, exec_type, file_type;
 
 # Started by init
 init_daemon_domain(sensorservice)
+
+allow sensorservice servicemanager:binder { call transfer };
+allow sensorservice servicemanager:dir { search };
+allow sensorservice servicemanager:file { read open };
+allow sensorservice servicemanager:process { getattr };
+allow sensorservice mediaserver:binder { transfer };
+allow sensorservice system_server:binder { transfer call };
+allow sensorservice sensors_prop:file { read open getattr };
+allow sensorservice sysfs:dir { read open };
+allow sensorservice sysfs:file { read open getattr write };
+allow sensorservice iio_device:chr_file { read open };
+allow sensorservice system_data_file:file { read open };
+allow sensorservice proc_net:file { read open getattr };
+allow sensorservice self:capability { dac_override sys_nice };
+allow sensorservice sensorext:unix_stream_socket { connectto };
+allow sensorservice persist_file:dir { search };

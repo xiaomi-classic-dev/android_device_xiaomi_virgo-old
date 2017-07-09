@@ -1,0 +1,3 @@
+allow servicemanager sensorservice:dir { search };
+allow servicemanager sensorservice:file { read open };
+allow servicemanager sensorservice:process { getattr };

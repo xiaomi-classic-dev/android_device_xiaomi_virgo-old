@@ -1,0 +1,2 @@
+allow audioserver audio_prop:property_service set;
+allow audioserver persist_file:dir { search };
