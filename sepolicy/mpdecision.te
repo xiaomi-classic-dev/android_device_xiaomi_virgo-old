@@ -1,3 +1,5 @@
 #============= mpdecision ==============
 allow mpdecision system_data_file:dir { add_name remove_name write };
 allow mpdecision system_data_file:sock_file { create setattr unlink write };
+allow mpdecision perfd_prop:file { read open getattr };
+# >neverallow< allow mpdecision self:capability sys_ptrace;

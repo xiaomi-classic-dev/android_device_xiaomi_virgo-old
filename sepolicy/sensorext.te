@@ -3,3 +3,14 @@ type sensorext_exec, exec_type, file_type;
 
 # Started by init
 init_daemon_domain(sensorext)
+
+allow sensorext self:udp_socket { create shutdown };
+allow sensorext self:capability { net_raw dac_override };
+allow sensorext self:dir { read open };
+allow sensorext self:file { getattr write };
+allow sensorext self:chr_file { read open };
+allow sensorext sysfs:file { read open getattr write };
+allow sensorext sysfs:dir { read open };
+allow sensorext iio_device:chr_file { read open };
+allow sensorext system_server:unix_stream_socket { connectto };
+allow sensorext sensorservice:unix_stream_socket { connectto };
