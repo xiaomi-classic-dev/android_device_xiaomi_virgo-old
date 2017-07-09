@@ -361,20 +361,9 @@ on post-fs-data
 
     mkdir /data/audio/ 0770 media audio
 
-    chown system system /sys/class/timed_output/vibrator/vtg_default
-    chown system system /sys/class/timed_output/vibrator/vtg_level
-    chown system system /sys/class/timed_output/vibrator/vtg_max
-    chown system system /sys/class/timed_output/vibrator/vtg_min
-
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_default
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_level
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_max
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_min
-
-    restorecon/sys/class/timed_output/vibrator/vtg_default
-    restorecon/sys/class/timed_output/vibrator/vtg_level
-    restorecon/sys/class/timed_output/vibrator/vtg_max
-    restorecon/sys/class/timed_output/vibrator/vtg_min
+    # Vibrator permissions
+    chown system system /sys/vibrator/pwmvalue
+    chmod 0644 /sys/vibrator/pwmvalue
 
     # Key disabler
     chown root system /proc/touchscreen/nav_button_enable
