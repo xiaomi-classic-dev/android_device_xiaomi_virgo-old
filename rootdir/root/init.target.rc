@@ -80,6 +80,15 @@ on post-fs-data
     chown system system /dev/sysmatdrv
     chmod 0660 /dev/sysmatdrv
 
+    # Torch
+    chown system camera /sys/class/leds/torch-light/brightness
+    chmod 0660 /sys/class/leds/torch-light/brightness
+
+    # RBG calibration
+    chown system system /sys/devices/virtual/graphics/fb0/rgb
+    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
+    restorecon /sys/devices/virtual/graphics/fb0/rgb
+
 on boot
     insmod /system/lib/modules/adsprpc.ko
     chown system system /sys/class/input/input0/enabled
@@ -97,18 +106,12 @@ on boot
     chown system system /sys/bus/i2c/devices/2-004b/hover_tune
     chown system system /sys/bus/i2c/devices/2-004b/hover_from_flash
     chown system system /sys/devices/fda0c000.qcom,cci/1c.qcom,actuator/bu63163
-    chmod 0660 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
-    chmod 0440 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
-    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
-    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
-    chmod 0660 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
-    chmod 0440 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
-    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
-    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
-    chown system system /sys/devices/fda0c000.qcom,cci/1c.qcom,actuator/bu63163
-    chown media media /sys/devices/fda0c000.qcom,cci/hid_acc_z
     exec /system/bin/sh /system/bin/atmel_hover_tune.sh
-
+    # update foreground cpuset now that processors are up
+    write /dev/cpuset/foreground/cpus 0-3
+    write /dev/cpuset/foreground/boost/cpus 0-3
+    write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-1
 
 # Dynamically modify golden_ref setting
 on property:persist.atmel.golden.enable=1
@@ -164,8 +167,25 @@ service gsiff_daemon /system/bin/gsiff_daemon
     user gps
     group gps net_raw misc
 
+service qrngd /system/bin/qrngd -f
+    class main
+    user root
+    group root
+
+service qrngp /system/bin/qrngp
+    class main
+    user root
+    group root
+    oneshot
+    disabled
+
 on property:sys.boot_completed=1
     start qrngp
+
+service loc_launcher /system/bin/loc_launcher
+    #loc_launcher will start as root and set its uid to gps
+    class late_start
+    group gps qcom_oncrpc inet net_raw qcom_diag net_admin wifi
 
 service qseecomd /system/bin/qseecomd
    class core
@@ -182,19 +202,6 @@ service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    user system
    group system
    disabled
-
-service thermal-engine /system/vendor/bin/thermal-engine
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   group root
-   disabled
-
-service thermal-perf /system/vendor/bin/thermal-engine --config /system/etc/thermal-engine-perf.conf
-   class main
-   user root
-   group radio system
 
 # Disable security-check to save 400M+ free buffers.
 service security-check1 /sbin/security_boot_check system
@@ -348,21 +355,6 @@ service changepowermode /system/bin/changepowermode.sh
     oneshot
     disabled
 
-on property:persist.sys.aries.power_profile=high
-    start changepowermode
-    stop thermal-engine
-    start thermal-perf
-
-on property:persist.sys.aries.power_profile=middle
-    start changepowermode
-    stop thermal-perf
-    start thermal-engine
-
-on property:persist.sys.aries.power_profile=low
-    start changepowermode
-    stop thermal-perf
-    start thermal-engine
-
 service service_ad /system/bin/adenable
     user root
     oneshot
@@ -378,6 +370,17 @@ service gamut_mode /system/bin/gamutmode
 
 on property:persist.sys.gamut_mode=*
     start gamut_mode
+    
+on property:persist.sys.display_prefer=0
+    write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x2
+on property:persist.sys.display_prefer=1
+    write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x1
+on property:persist.sys.display_prefer=2
+    write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x2
+on property:persist.sys.display_prefer=3
+    write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x3
+on property:persist.sys.display_prefer=4
+    write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x4
 
 on property:persist.sys.display_ce=0
     write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0xF0
@@ -422,13 +425,3 @@ on property:persist.radio.modem=LTE-X5-ALL
 on property:persist.radio.modem=LTE-X5
     setprop persist.radio.disable_flexmap 1
     setprop ro.sys.oosenhance.timer 20000
-
-service eyecare /system/bin/eyecare
-    user root
-    oneshot
-    disabled
-
-on property:persist.sys.display_eyecare=*
-    start eyecare
-on property:persist.sys.display_prefer=*
-    start eyecare
