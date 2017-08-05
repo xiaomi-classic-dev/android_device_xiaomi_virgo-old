@@ -112,3 +112,8 @@ ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
 ro.sys.sdcardfs=true
+
+# hifi
+ro.audio.hifi=true
+persist.audio.hifi=false
+persist.audio.hifi.volume=73
