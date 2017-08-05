@@ -108,10 +108,10 @@ on boot
     chown system system /sys/devices/fda0c000.qcom,cci/1c.qcom,actuator/bu63163
     exec /system/bin/sh /system/bin/atmel_hover_tune.sh
     # update foreground cpuset now that processors are up
-    write /dev/cpuset/foreground/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-3
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-1
+    # write /dev/cpuset/foreground/cpus 0-3
+    # write /dev/cpuset/foreground/boost/cpus 0-3
+    # write /dev/cpuset/background/cpus 0
+    # write /dev/cpuset/system-background/cpus 0-1
 
 # Dynamically modify golden_ref setting
 on property:persist.atmel.golden.enable=1
