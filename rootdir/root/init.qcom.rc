@@ -286,39 +286,33 @@ on enable-low-power
     write /sys/kernel/msm_thermal/enabled 1
 
 on charger
+    wait /dev/block/platform/msm_sdcc.1/by-name/system
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system wait ro barrier=1
-    write /sys/class/input/input0/enabled 0
-    write /sys/class/input/input1/enabled 0
-    write /sys/class/input/input2/enabled 0
-    write /sys/class/input/input3/enabled 0
-    write /sys/class/input/input4/enabled 0
-    write /sys/class/input/input5/enabled 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "userspace"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed 300000
+    start irsc_util
+    start rmt_storage
+    # Enable Power modes and set the CPU Freq Sampling rates
+    write /sys/module/lpm_levels/enable_low_power/l2 2
+    write /sys/module/msm_pm/modes/cpu0/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu0/power_collapse/idle_enabled 1
+    write /sys/kernel/msm_thermal/enabled 0
     write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_setspeed 300000
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "conservative"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "conservative"
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "conservative"
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "conservative"
+    write /sys/kernel/msm_thermal/enabled 1
+    write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/msm_thermal/parameters/enabled "N"
-    chown root system /sys/power/wake_lock
-    chown root system /sys/power/wake_unlock
-    chmod 0664 /sys/power/wake_lock
-    chmod 0664 /sys/power/wake_lock
-    chown root system /sys/module/qpnp_charger/parameters/charger_monitor
-    chown root system /sys/module/qpnp_charger/parameters/ext_ovp_present
-    chown root system /sys/class/power_supply/battery/input_current_max
-    chown root system /sys/class/power_supply/battery/input_current_trim
-    chown root system /sys/class/power_supply/battery/input_current_settled
-    chown root system /sys/class/power_supply/battery/voltage_min
-    chmod 0664 /sys/class/power_supply/battery/input_current_max
-    chmod 0664 /sys/class/power_supply/battery/input_current_trim
-    chmod 0664 /sys/class/power_supply/battery/input_current_settled
-    chmod 0664 /sys/class/power_supply/battery/voltage_min
-    chmod 0664 /sys/module/qpnp_charger/parameters/charger_monitor
     start hvdcp
     start charger_monitor
     class_start charger
+    
 # msm specific files that need to be created on /data
 on post-fs-data
     # Create directory for TZ Apps
@@ -866,9 +860,9 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service charger /charger
+service charger /sbin/healthd -c
     class charger
-    group system graphics
+    critical
     seclabel u:r:healthd:s0
 
 service ssr_diag /system/bin/ssr_diag
@@ -893,6 +887,9 @@ service fastmmisrv /system/bin/sh /init.qcom.factory.sh
 
 on ffbm
     start fastmmisrv
+
+service charger /charger
+    class charger
 
 service hvdcp /system/bin/hvdcp
     class core
