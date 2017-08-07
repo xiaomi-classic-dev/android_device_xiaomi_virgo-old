@@ -65,15 +65,12 @@ lib/libchromatix_imx135_liveshot.so
 lib/libmmcamera_interface.so
 lib/libloc_core.so
 lib/libqminvapi.so
-vendor/bin/thermal-engine
 vendor/qcril.db
-vendor/firmware/bcm2079x-b5_firmware.ncd
 vendor/firmware/keymaster/keymaster.b00
 vendor/firmware/keymaster/keymaster.b02
 vendor/firmware/keymaster/keymaster.b03
 vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.mdt
-vendor/firmware/bcm2079x-b5_pre_firmware.ncd
 vendor/lib/libactuator_ov8825.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libdrmdecrypt.so
@@ -95,7 +92,6 @@ vendor/lib/librs_adreno_sha1.so
 vendor/lib/libchromatix_ov4688_default_video.so
 vendor/lib/libchromatix_imx215_snapshot_w.so
 vendor/lib/libgeofence.so
-vendor/lib/libthermalioctl.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_snapshot.so
 vendor/lib/libchromatix_imx135_hfr_60.so
 vendor/lib/libidl.so
@@ -351,7 +347,6 @@ vendor/lib/libchromatix_imx226_default_video.so
 vendor/lib/libchromatix_imx215_hfr_120.so
 vendor/lib/libchromatix_imx134_hfr_120.so
 vendor/lib/libqmi_cci.so
-vendor/lib/libthermalclient.so
 vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libsensor1.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_default_video.so
@@ -364,6 +359,7 @@ vendor/lib/libchromatix_imx224_snapshot.so
 vendor/lib/libchromatix_imx224_hfr_120.so
 vendor/lib/libchromatix_s5k3l1yx_default_video.so
 vendor/lib/libchromatix_SKUAB_ST_s5k4e1_zsl.so
+vendor/lib/libbccQTI.so
 vendor/lib/libchromatix_skuf_ov12830_p12v01c_snapshot.so
 vendor/lib/libmmcamera_wavelet_lib.so
 vendor/lib/libqmiservices.so
@@ -505,7 +501,5 @@ etc/android_model_facea.dat
 etc/android_model_faceg.dat
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca
-etc/thermal-engine-perf.conf
 etc/sensor_def_qcomdev.conf
-etc/thermal-engine-8974.conf
 etc/sensor_diag.cfg
