@@ -22,7 +22,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hsic.control.bt.sh \
     init.qcom.bt.sh \
-    chargeonlymode \
     init.class_main.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
