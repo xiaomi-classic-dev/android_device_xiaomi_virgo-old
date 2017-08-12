@@ -840,7 +840,7 @@
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="SLIM TX7 MUX" value="DEC2" />
         <ctl name="DEC2 MUX" value="ADC5" />
-        <ctl name="DEC2 Volume" value="84" />
+        <ctl name="DEC2 Volume" value="99" />
         <ctl name="ADC5 Volume" value="12" />
         <ctl name="IIR1 INP1 MUX" value="DEC2" />
     </path>
