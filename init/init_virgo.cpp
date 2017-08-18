@@ -34,12 +34,15 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
+#include <android-base/file.h>
+#include <android-base/properties.h>
 #include <android-base/strings.h>
 
+#include "property_service.h"
 #include "vendor_init.h"
-#include "log.h"
-#include "util.h"
 
+using android::base::GetProperty;
+using android::base::ReadFileToString;
 using android::base::Trim;
 
 void init_alarm_boot_properties()
@@ -48,10 +51,10 @@ void init_alarm_boot_properties()
     char const *power_off_alarm_file = "/persist/alarm/powerOffAlarmSet";
     std::string boot_reason;
     std::string power_off_alarm;
-    std::string tmp = property_get("ro.boot.alarmboot");
+    std::string tmp = GetProperty("ro.boot.alarmboot", "");
 
-    if (read_file(boot_reason_file, &boot_reason)
-            && read_file(power_off_alarm_file, &power_off_alarm)) {
+    if (ReadFileToString(boot_reason_file, &boot_reason)
+            && ReadFileToString(power_off_alarm_file, &power_off_alarm)) {
 
     /*
      * Setup ro.alarm_boot value to true when it is RTC triggered boot up
