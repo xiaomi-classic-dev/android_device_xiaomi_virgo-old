@@ -205,6 +205,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8974
 
+# Sensor
+PRODUCT_PACKAGES += \
+    sensors.msm8974
+
 # Misc dependency packages
 PRODUCT_PACKAGES += \
     ebtables \
