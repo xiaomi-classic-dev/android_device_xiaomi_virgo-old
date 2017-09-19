@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=cancro
+DEVICE=virgo
 VENDOR=xiaomi
 
 # Load extractutils and do some sanity checks
