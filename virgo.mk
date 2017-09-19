@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core.sh \
     init.qcom.syspart_fixup.sh \
     recovery_fstab.qcom \
-    init.qcom.fm.sh \
     init.qcom.modem_links.sh \
     init.qcom.post_boot.sh \
     init.qcom.wifi.sh \
