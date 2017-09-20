@@ -4,4 +4,4 @@
 /data          ext4      /dev/block/platform/msm_sdcc.1/by-name/userdata	length=-16384
 /cache         ext4      /dev/block/platform/msm_sdcc.1/by-name/cache
 
-/usb-otg      vfat   /devices/platform/xhci-hcd/usb1            flags=display="USB OTG";storage;removable
+/usbotg       auto    /dev/block/platform/xhci-hcd/by-num/p1            flags=display="USB-OTG";storage;wipeingui;removable
