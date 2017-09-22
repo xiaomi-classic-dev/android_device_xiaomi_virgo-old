@@ -132,7 +132,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/MTP/MTP_Speaker_cal.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.offload.pcm.enable=true
+    audio.offload.pcm.enable=true \
+    audio.offload.pcm.24bit.enable=true \
+    audio.offload.pcm.16bit.enable=true
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
