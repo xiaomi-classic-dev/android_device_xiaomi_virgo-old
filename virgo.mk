@@ -41,6 +41,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
+# Baseband assertion
+PRODUCT_PACKAGES += librecovery_updater_virgo
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8974 \
