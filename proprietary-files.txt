@@ -545,3 +545,7 @@ etc/firmware/wcnss.mdt|49dfb1101d54a76a4a022c19653c732b80c0dc0e
 vendor/lib/libwifiscanner.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxtwifi_zpp_adaptor.so
+
+# Sony Framework
+etc/permissions/com.sony.device.xml|834a27f9a9d9e042386e095805c4656c68080e25
+framework/com.sony.device.jar|bc2f388d705e6638bdf82122bd529ea1df625096
