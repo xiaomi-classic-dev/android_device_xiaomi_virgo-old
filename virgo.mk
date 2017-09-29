@@ -200,6 +200,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8974 \
     liboverlay
 
+# Misc dependency packages
+PRODUCT_PACKAGES += \
+    libcurl
+
 # Radio
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
