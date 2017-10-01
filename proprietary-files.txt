@@ -518,10 +518,7 @@ etc/firmware/venus.mdt|a8a16453e83f32a4dd679e061f15071a4af33e39
 vendor/lib/drm/libdrmwvmplugin.so|32fcdf3f901c45079ccd8c99abc7481b963a880b
 vendor/lib/libwvm.so|59c4c078f4b897ddac8f665309b7a3f25522f207
 vendor/lib/libwvdrm_L1.so|3eaf8ed1cb337608a1ccdb80d2c95804e7aea323
-vendor/lib/libwvdrm_L3.so
-vendor/lib/libWVphoneAPI.so
 vendor/lib/libWVStreamControlAPI_L1.so|6b28492ac55b9a3d86993343cf2c8b55240b3420
-vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/mediadrm/libwvdrmengine.so|6bdcc4d59b07ccbdd7b07a99677406ade3d2e232
 
 # WiFi
