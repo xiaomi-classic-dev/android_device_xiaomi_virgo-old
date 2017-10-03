@@ -198,11 +198,6 @@ service mpdecision /system/bin/mpdecision --avg_comp
    group system
    disabled
 
-service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
-   user system
-   group system
-   disabled
-
 # Disable security-check to save 400M+ free buffers.
 service security-check1 /sbin/security_boot_check system
     class core
