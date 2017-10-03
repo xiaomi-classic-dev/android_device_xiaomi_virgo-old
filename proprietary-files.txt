@@ -344,16 +344,13 @@ bin/charger_monitor
 bin/hvdcp
 
 # DRM
-bin/qseecomd
-lib/libdrmdecrypt.so
-vendor/lib/libdrmdecrypt.2.so
-vendor/lib/liboemcrypto.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/librpmb.so
-vendor/lib/libssd.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
+bin/qseecomd|3f31ee375bb428ec6fbd2051ba5a5e3a974ce1ac
+vendor/lib/libQSEEComAPI.so|394c357c961b6d2189d585a7723f9e0cf00ac6b2
+vendor/lib/libdrmdiag.so|1aa9354d0474978df6d115d0cc323c1f5ec1085c
+vendor/lib/libdrmfs.so|58e9c79015e41584ac428e1b38ef7123b08341d7
+vendor/lib/libdrmtime.so|11453596a444d331d6f752381757f29bdd4e9140
+vendor/lib/librpmb.so|539ebd9a37c5b4d6133dd83b744a04f957a8f563
+vendor/lib/libssd.so|635664a6c4c3a5c83836770960bf8b2d6d935371
 
 # Firmware
 lib/libstm-log.so
@@ -514,6 +511,7 @@ etc/firmware/venus.mdt|a8a16453e83f32a4dd679e061f15071a4af33e39
 
 # Widevine
 vendor/lib/drm/libdrmwvmplugin.so|32fcdf3f901c45079ccd8c99abc7481b963a880b
+vendor/lib/liboemcrypto.so|ed97a68cd9a604db43aa1267b4d525693b27afdf
 vendor/lib/libwvm.so|59c4c078f4b897ddac8f665309b7a3f25522f207
 vendor/lib/libwvdrm_L1.so|3eaf8ed1cb337608a1ccdb80d2c95804e7aea323
 vendor/lib/libWVStreamControlAPI_L1.so|6b28492ac55b9a3d86993343cf2c8b55240b3420
