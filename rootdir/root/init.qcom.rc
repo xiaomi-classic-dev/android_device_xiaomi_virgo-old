@@ -435,13 +435,6 @@ service usbhub_init /system/bin/usbhub_init
    disabled
    oneshot
 
-service mpdecision /system/bin/mpdecision
-    class main
-    user root
-    disabled
-    socket perfd seqpacket 0666 root system
-
-
 service qcomsysd /system/bin/qcom-system-daemon
     class main
 
