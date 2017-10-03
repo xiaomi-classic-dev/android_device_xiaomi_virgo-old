@@ -419,8 +419,9 @@ vendor/lib/libmmosal.so
 vendor/lib/libSHIMDivxDrm.so
 
 # Perf
-bin/mpdecision
-vendor/lib/libqti-perfd-client.so
+bin/mpdecision|3f4e253ccbc52ceef09b87f0752037ba6c6dd8d1
+vendor/lib/libqc-opt.so|72286ef823edbef0e33e37e619d1f61fffc1dc1c
+vendor/lib/libqti-perfd-client.so|c150ca67156bcfd8c65efd2fd06e6a348f0bd870
 
 # Postprocessing
 vendor/lib/libdisp-aba.so
