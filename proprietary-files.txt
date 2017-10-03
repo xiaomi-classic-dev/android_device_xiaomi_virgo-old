@@ -1,6 +1,6 @@
 # Bluetooth
-bin/btnvtool
-vendor/lib/libbtnv.so
+bin/btnvtool|09fd5d1deebc160207f8a65e9ec181d1b56f5ff9
+vendor/lib/libbtnv.so|e0ba4b0c4fc6ab38b2504bea1596ff58dfe6c307
 
 # ADSP
 bin/adsprpcd|aa97571db27377f16b790eb312ad5936f84a666f
