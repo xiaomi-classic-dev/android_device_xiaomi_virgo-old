@@ -498,10 +498,10 @@ vendor/lib/libsensor_test.so|78dd54ab5b286d64b9e31719ebb794fe87e70dfa
 vendor/lib/libsensor_user_cal.so|0e79f9d429fb8ee7999fe143b36c8a6cc9181211
 
 # Time services
-bin/time_daemon
--vendor/lib/libtime_genoff.so
--vendor/lib/libTimeService.so
--app/TimeService/TimeService.apk
+bin/time_daemon|a6379b515702f2c52f904a3ee7c357a346fdcb78
+-vendor/lib/libtime_genoff.so|b979a44a02adbc2f09eee0cdd842bc94ac3266d6
+-vendor/lib/libTimeService.so|577bd7c95a481215605bec37976547caf2e0a90e
+-app/TimeService/TimeService.apk|2700333d30538ca802d21cb1ef16d208a7a04b11
 
 # Venus (media) firmware
 etc/firmware/venus.b00|105dc75c8df327e24edffb98769da83b8179fce0
