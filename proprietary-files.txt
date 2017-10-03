@@ -521,7 +521,7 @@ vendor/lib/mediadrm/libwvdrmengine.so|6bdcc4d59b07ccbdd7b07a99677406ade3d2e232
 # WiFi
 bin/lowi-server
 bin/wcnss_filter
-bin/wcnss_service
+bin/wcnss_service|9506726df729e4691b6a46a1eb13b285cd4221c6
 bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/firmware/cpp_firmware_v1_1_1.fw
