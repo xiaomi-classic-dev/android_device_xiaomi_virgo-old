@@ -291,4 +291,7 @@
          and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOff">true</bool>
 
+    <!-- Flag indicating if the speed up audio on mt call code should be executed -->
+    <bool name="config_speed_up_audio_on_mt_calls">true</bool>
+
 </resources>
