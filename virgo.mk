@@ -102,8 +102,7 @@ PRODUCT_PACKAGES += \
 
 # IPC router config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config \
-    $(LOCAL_PATH)/configs/lowi.conf:system/etc/lowi.conf
+    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # Proprietery Firmware
 PRODUCT_COPY_FILES += \
