@@ -32,7 +32,6 @@ vendor/lib/liblistenhardware.so|70e60610b6be0189599665eaf5897b98dc0b1936
 vendor/lib/liblistenjni.so|71246defe1e786919b51de4e577e0371be86f25a
 vendor/lib/liblisten.so|94c4ee3603b058f86a80151db65300860a1a7af0
 vendor/lib/liblistensoundmodel.so|ce73b38c58e87a437dc91420660c115cbe1d68d0
-vendor/lib/libsrsprocessing.so
 vendor/lib/soundfx/libqcbassboost.so|8df06ffa55cab5ea02ec9ce74f1a15f913d7bc4f
 vendor/lib/soundfx/libqcreverb.so|eab7acb1cbe9556f9c564cc870f755ce70d2791d
 vendor/lib/soundfx/libqcvirt.so|5f72150e6e6b053d19cb789931981594afb61bc9
@@ -349,7 +348,6 @@ vendor/lib/librpmb.so|539ebd9a37c5b4d6133dd83b744a04f957a8f563
 vendor/lib/libssd.so|635664a6c4c3a5c83836770960bf8b2d6d935371
 
 # Firmware
-lib/libstm-log.so
 vendor/firmware/keymaster/keymaster.b00
 vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.b02
@@ -358,23 +356,16 @@ vendor/firmware/keymaster/keymaster.mdt
 
 # GPS
 bin/loc_launcher
-bin/quipc_igsn
-bin/quipc_main
 lib/hw/gps.msm8974.so
 lib/libloc_api_v02.so
-lib/libloc_ds_api.so
 lib/libgps.utils.so
 lib/libloc_core.so
 lib/libloc_eng.so
 vendor/lib/hw/flp.default.so
+vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
-vendor/lib/liblocationservice.so
-vendor/lib/libquipc_os_api.so
-vendor/lib/libquipc_ulp_adapter.so
-vendor/lib/libulp2.so
-vendor/lib/libxtadapter.so
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so|b8a5790c5b4ba4cf0018c94066104610c821ed8e
@@ -515,11 +506,7 @@ vendor/lib/libWVStreamControlAPI_L1.so|6b28492ac55b9a3d86993343cf2c8b55240b3420
 vendor/lib/mediadrm/libwvdrmengine.so|6bdcc4d59b07ccbdd7b07a99677406ade3d2e232
 
 # WiFi
-bin/lowi-server
-bin/wcnss_filter
 bin/wcnss_service|9506726df729e4691b6a46a1eb13b285cd4221c6
-bin/xtwifi-client
-bin/xtwifi-inet-agent
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
@@ -532,9 +519,6 @@ etc/firmware/wcnss.b07|fb3d8fb74570a077e332993f7d3d27603501b987
 etc/firmware/wcnss.b08|6db99ec3aead0e567d869c2f5676483b66422d38
 etc/firmware/wcnss.b09|08a162e9fe7a87b04d694a9656fd19aa92b1565f
 etc/firmware/wcnss.mdt|49dfb1101d54a76a4a022c19653c732b80c0dc0e
-vendor/lib/libwifiscanner.so
-vendor/lib/libxtwifi_ulp_adaptor.so
-vendor/lib/libxtwifi_zpp_adaptor.so
 
 # Sony Framework
 etc/permissions/com.sony.device.xml|834a27f9a9d9e042386e095805c4656c68080e25
