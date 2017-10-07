@@ -407,6 +407,7 @@ vendor/lib/libqc-opt.so|72286ef823edbef0e33e37e619d1f61fffc1dc1c
 vendor/lib/libqti-perfd-client.so|c150ca67156bcfd8c65efd2fd06e6a348f0bd870
 
 # Postprocessing
+bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so|edb1a85dc201980564a5fd7b068fac3e071afb7f
 vendor/lib/libmm-abl.so|bfb77160be06a439e3b4b2dfba0af2866f69a26e
 vendor/lib/libmm-abl-oem.so|ca811f864ad9d351679916b6c31d45df16a9d1a5
