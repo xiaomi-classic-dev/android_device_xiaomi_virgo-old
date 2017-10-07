@@ -155,33 +155,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
 
-#start gesture server as daemon
-service qgesturesvr /system/bin/mm-gesture-daemon
-    class late_start
-    user system
-    group system camera input graphics net_bt_stack
-
-#start GNSS/Sensor interface daemon
-service gsiff_daemon /system/bin/gsiff_daemon
-    class late_start
-    user gps
-    group gps net_raw misc
-
-service qrngd /system/bin/qrngd -f
-    class main
-    user root
-    group root
-
-service qrngp /system/bin/qrngp
-    class main
-    user root
-    group root
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start qrngp
-
 service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
@@ -268,12 +241,6 @@ service usf-post-boot /system/bin/sh /system/etc/usf_post_boot.sh
 on property:init.svc.bootanim=stopped
     start usf-post-boot
 
-service imsqmidaemon /system/bin/imsqmidaemon
-    class main
-    user system
-    socket ims_qmid stream 0660 system radio
-    group radio net_raw log qcom_diag
-
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user system
@@ -304,12 +271,6 @@ on property:persist.sys.matsir.enable=1
     start sysmatsir
     start sysmatpro
 
-service immvibed /system/bin/immvibed
-    class late_start
-    user system
-    group system
-    oneshot
-
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
@@ -338,12 +299,6 @@ service ppd /system/bin/mm-pp-daemon
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
-
-service nqs /system/bin/nqs
-    class late_start
-    socket nqs_qsb_comm stream 660 system system
-    user system
-    group drmrpc
 
 service changepowermode /system/bin/changepowermode.sh
     user root
