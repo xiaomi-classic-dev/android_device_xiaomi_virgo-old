@@ -44,8 +44,7 @@ etc/android_model_facea.dat
 etc/android_model_faceg.dat
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca
-lib/hw/camera.vendor.msm8974.so
-lib/libc2dcolorconvert.so
+lib/hw/camera.msm8974.so:lib/hw/camera.vendor.msm8974.so
 lib/libchromatix_imx135_liveshot.so
 lib/libchromatix_imx214_liveshot.so
 lib/libchromatix_imx215_liveshot.so
@@ -54,9 +53,9 @@ lib/libchromatix_imx224_liveshot.so
 lib/libchromatix_imx225_liveshot.so
 lib/libchromatix_imx226_liveshot.so
 lib/libchromatix_s5k3m2_liveshot.so
+lib/libmm-qcamera.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
-lib/libOmxVenc.so
 lib/libqomx_core.so
 lib/libRecoFace.so
 vendor/lib/libAKM8963.so|b144b858b42854983b70c6b36781a091cd67621a
@@ -267,12 +266,10 @@ vendor/lib/libchromatix_skuf_ov5648_p5v23c_common.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_default_video.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_preview.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_snapshot.so
-vendor/lib/libFaceDeform.so
 vendor/lib/libFaceProc.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmm-color-convertor.so
-vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_frame_algorithm.so
@@ -331,11 +328,9 @@ vendor/lib/libmmcamera_x4_s5k3m2_eeprom.so
 vendor/lib/libmmcamera_x5_imx214_eeprom.so
 vendor/lib/libmmipl.so
 vendor/lib/libmmjpeg.so
+vendor/lib/libmmparser.so
 vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmmQSM.so
 vendor/lib/liboemcamera.so
-vendor/lib/liboptizoom.so
-vendor/lib/libqct_resampler.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libubifocus.so
