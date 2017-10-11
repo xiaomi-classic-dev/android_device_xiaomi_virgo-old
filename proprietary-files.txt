@@ -42,6 +42,7 @@ etc/android_model_facea.dat
 etc/android_model_faceg.dat
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca
+etc/watermark_font_2300_3199.dat
 lib/hw/camera.msm8974.so:lib/hw/camera.vendor.msm8974.so
 lib/libchromatix_imx135_liveshot.so
 lib/libchromatix_imx214_liveshot.so
