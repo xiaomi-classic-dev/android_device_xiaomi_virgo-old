@@ -382,7 +382,6 @@ vendor/lib/libCB.so|988840ffafed704302f82d6deeb861431bed97bf
 vendor/lib/libgsl.so|0125b1b07b95112f5600e7d23973e7d2061196d1
 vendor/lib/libllvm-qcom.so|d3f8cf14afeb64fb5e5d7c7e2de763b313b8b327
 vendor/lib/libOpenCL.so|232e14d6b0512876c6c024705a9c44866b7d2084
-vendor/lib/libOpenVG.so|d193222c783cbecc93d32cbb121f5aadd51c4b8d
 vendor/lib/libscale.so|58c2d6dda706800d40407fa8b13d0a6ba602cd6b
 vendor/lib/libsc-a3xx.so|ebd30d961fd2919bf57d86b8d7771330288ab7da
 vendor/lib/libRSDriver_adreno.so|ff009749e3f0d73118edf5f0e6ba82da3f09ac51
