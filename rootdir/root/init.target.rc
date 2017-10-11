@@ -304,22 +304,6 @@ service changepowermode /system/bin/changepowermode.sh
     user root
     oneshot
     disabled
-
-service service_ad /system/bin/adenable
-    user root
-    oneshot
-    disabled
-
-on property:persist.sys.ltm_enable=*
-    start service_ad
-
-service gamut_mode /system/bin/gamutmode
-    user root
-    oneshot
-    disabled
-
-on property:persist.sys.gamut_mode=*
-    start gamut_mode
     
 on property:persist.sys.display_prefer=0
     write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x2
