@@ -162,7 +162,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxVdecHevc \
-    libdashplayer \
     libmm-omxcore \
     libqcmediaplayer \
     libstagefrighthw
