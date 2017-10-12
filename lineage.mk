@@ -35,3 +35,7 @@ PRODUCT_MODEL := MI NOTE LTE
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=Xiaomi/virgo/virgo:7.1.1/NMF26F/7.2.3:userdebug/release-keys \
+    PRIVATE_BUILD_DESC="virgo-userdebug 7.1.1 NMF26F 7.2.3 release-keys"
