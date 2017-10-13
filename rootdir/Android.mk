@@ -52,6 +52,13 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/usf_post_boot.sh
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE       := set_sensorprop.sh
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/set_sensorprop.sh
+include $(BUILD_PREBUILT)
+
 # Device init files
 
 include $(CLEAR_VARS)

@@ -217,6 +217,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.msm8974
 
+PRODUCT_PACKAGES += \
+    set_sensorprop.sh
+
 # Misc dependency packages
 PRODUCT_PACKAGES += \
     ebtables \
