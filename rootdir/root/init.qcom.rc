@@ -254,7 +254,7 @@ on boot
     chown system system /sys/class/rtc/rtc0/wakealarm
     chmod 0666 /sys/class/rtc/rtc0/wakealarm
 
-    exec /system/bin/sh  /system/bin/set_sensorprop.sh
+    exec /system/bin/sh  /system/etc/set_sensorprop.sh
 
 # Enable manual network selection function and distinguish 2G/3G/4G
     setprop persist.radio.rat_on combine
