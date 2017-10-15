@@ -332,6 +332,7 @@ vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
+vendor/lib/libt2tmanager.so
 vendor/lib/libubifocus.so
 
 # Charger
@@ -416,7 +417,6 @@ vendor/lib/libmm-abl-oem.so|ca811f864ad9d351679916b6c31d45df16a9d1a5
 # Qualcomm framework
 bin/irsc_util
 etc/data/qmi_config.xml
-vendor/lib/libt2tmanager.so
 -vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 -vendor/lib/libdsutils.so
