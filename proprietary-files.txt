@@ -402,6 +402,11 @@ vendor/lib/libI420colorconvert.so|8b2fc81122ca24ad70dde1a370eff552eea3b857
 vendor/lib/libmm-color-convertor.so|08aef70b271e07f31dff7f89d9391ae39269a6c3
 vendor/lib/libmmosal.so|838e8f778f31221b06260f5944d8cbab80893343
 vendor/lib/libSHIMDivxDrm.so|48bc5c12fbd8068f6df2700d912da115532a15d6
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxWmaDec.so
 
 # Perf
 bin/mpdecision|3f4e253ccbc52ceef09b87f0752037ba6c6dd8d1
