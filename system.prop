@@ -84,7 +84,7 @@ persist.radio.force_on_dc=true
 # For sglte CT's operator name
 persist.radio.sglte.eons_domain=ps
 # default network
-ro.telephony.default_network=20
+ro.telephony.default_network=20,20
 persist.radio.multisim.config=dsds
 
 ro.qualcomm.perf.cores_online=1
