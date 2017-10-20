@@ -18,7 +18,7 @@ vendor/lib/libscve.so|142e7f0497f418d0389d3c5886f5ace874418ae6
 vendor/lib/libscve_stub.so|5eba058f976efd08ec626c44ab223cc83c2b03b1
 
 # Audio
-lib/hw/audio.primary.msm8974.so|21879e7c62d8bd611775c98d09a03814f4e61359
+lib/hw/audio.primary.msm8974.so:vendor/lib/hw/audio.primary.msm8974.so|21879e7c62d8bd611775c98d09a03814f4e61359
 lib/soundfx/libdirac.so|df1c5278273cd313e02037601413e258ab1c120d
 lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 lib/libtinyalsa.so|6d711709a7e127a8618b160946d1388f2caf026d
