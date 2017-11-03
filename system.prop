@@ -121,8 +121,6 @@ ro.qualcomm.bluetooth.nap=true
 ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
-ro.sys.sdcardfs=false
-
 # hifi
 ro.audio.hifi=true
 persist.audio.hifi=false
