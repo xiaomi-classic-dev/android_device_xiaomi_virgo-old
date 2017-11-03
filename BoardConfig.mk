@@ -71,6 +71,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 QCOM_BT_USE_SMD_TTY                         := true
 BLUETOOTH_HCI_USE_MCT                       := true
 
+# Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
+
 # Radio
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 
