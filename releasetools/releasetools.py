@@ -18,3 +18,7 @@ def FullOTA_PostValidate(info):
     info.script.AppendExtra('run_program("/sbin/e2fsck", "-fy", "/dev/block/platform/msm_sdcc.1/by-name/system");');
     info.script.AppendExtra('run_program("/tmp/install/bin/resize2fs_static", "/dev/block/platform/msm_sdcc.1/by-name/system");');
     info.script.AppendExtra('run_program("/sbin/e2fsck", "-fy", "/dev/block/platform/msm_sdcc.1/by-name/system");');
+
+def FullOTA_InstallEnd(info):
+    info.script.Print("https://weibo.com/guaiyihu");
+    info.script.Print("By GuaiYiHu");
