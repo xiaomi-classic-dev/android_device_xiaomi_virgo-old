@@ -345,6 +345,7 @@ bin/hvdcp
 
 # DRM
 bin/qseecomd|3f31ee375bb428ec6fbd2051ba5a5e3a974ce1ac
+vendor/lib/liboemcrypto.so|ed97a68cd9a604db43aa1267b4d525693b27afdf
 vendor/lib/libQSEEComAPI.so|394c357c961b6d2189d585a7723f9e0cf00ac6b2
 vendor/lib/libdrmdiag.so|1aa9354d0474978df6d115d0cc323c1f5ec1085c
 vendor/lib/libdrmfs.so|58e9c79015e41584ac428e1b38ef7123b08341d7
@@ -506,13 +507,8 @@ etc/firmware/venus.b04|c1756e0567d10a1173f481cd367ff4637b2dd77f
 etc/firmware/venus.mbn|a01eac87e4c57cb5d1e0596a31fee857977d8081
 etc/firmware/venus.mdt|a8a16453e83f32a4dd679e061f15071a4af33e39
 
-# Widevine
-vendor/lib/drm/libdrmwvmplugin.so|32fcdf3f901c45079ccd8c99abc7481b963a880b
-vendor/lib/liboemcrypto.so|ed97a68cd9a604db43aa1267b4d525693b27afdf
-vendor/lib/libwvm.so|59c4c078f4b897ddac8f665309b7a3f25522f207
-vendor/lib/libwvdrm_L1.so|3eaf8ed1cb337608a1ccdb80d2c95804e7aea323
-vendor/lib/libWVStreamControlAPI_L1.so|6b28492ac55b9a3d86993343cf2c8b55240b3420
-vendor/lib/mediadrm/libwvdrmengine.so|6bdcc4d59b07ccbdd7b07a99677406ade3d2e232
+# Widevine - from angler - OPR6.170623.017 factory image
+vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 
 # WiFi
 bin/wcnss_service|9506726df729e4691b6a46a1eb13b285cd4221c6
