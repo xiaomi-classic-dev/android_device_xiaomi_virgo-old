@@ -492,7 +492,6 @@
     <path name="voice-call speaker">
         <ctl name="SEC_MI2S_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="1" />
-        <ctl name="Smartpa Preset" value="1" />
     </path>
 
     <path name="voice-call hdmi">
@@ -523,7 +522,6 @@
     <path name="voice2-call speaker">
         <ctl name="SEC_MI2S_RX_Voice Mixer Voice2" value="1" />
         <ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="1" />
-        <ctl name="Smartpa Preset" value="1" />
     </path>
 
     <path name="voice2-call hdmi">
