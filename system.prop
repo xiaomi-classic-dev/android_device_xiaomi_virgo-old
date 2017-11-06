@@ -120,8 +120,3 @@ ro.qualcomm.bluetooth.map=true
 ro.qualcomm.bluetooth.nap=true
 ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
-
-# hifi
-ro.audio.hifi=true
-persist.audio.hifi=false
-persist.audio.hifi.volume=73
