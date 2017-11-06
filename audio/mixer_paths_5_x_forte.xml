@@ -302,10 +302,6 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
-    <path name="deep-buffer-playback hifi-headphones">
-        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
-    </path>
-
     <path name="deep-buffer-playback speaker-and-headphones">
         <path name="deep-buffer-playback speaker" />
         <path name="deep-buffer-playback" />
@@ -363,10 +359,6 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
-    <path name="low-latency-playback hifi-headphones">
-        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
-    </path>
-
     <path name="low-latency-playback speaker-and-headphones">
         <path name="low-latency-playback speaker" />
         <path name="low-latency-playback" />
@@ -421,10 +413,6 @@
 
     <path name="compress-offload-playback speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
-    </path>
-
-    <path name="compress-offload-playback hifi-headphones">
-        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback speaker-and-headphones">
@@ -983,9 +971,6 @@
         <ctl name="HPHL Volume" value="15" />
         <ctl name="HPHR Volume" value="15" />
    </path>
-
-    <path name="hifi-headphones">
-    </path>
 
    <path name="headset-mic">
         <path name="adc2" />
