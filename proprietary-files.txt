@@ -390,9 +390,9 @@ vendor/lib/libllvm-qcom.so|d3f8cf14afeb64fb5e5d7c7e2de763b313b8b327
 vendor/lib/libOpenCL.so|232e14d6b0512876c6c024705a9c44866b7d2084
 vendor/lib/libscale.so|58c2d6dda706800d40407fa8b13d0a6ba602cd6b
 vendor/lib/libsc-a3xx.so|ebd30d961fd2919bf57d86b8d7771330288ab7da
-vendor/lib/libRSDriver_adreno.so|ff009749e3f0d73118edf5f0e6ba82da3f09ac51
-vendor/lib/librs_adreno.so|41f58624a6ba97858bf8fbf00938256482aef7a0
-vendor/lib/librs_adreno_sha1.so|4e526a49fecf340df8afa404bfb6d9a2e86b9876
+vendor/lib/libRSDriver_adreno.so|b7cea69e2fe30185ee9681eaf44c1ab9
+vendor/lib/librs_adreno.so|f5ac8b20525eb3794f11559f4566731a
+vendor/lib/librs_adreno_sha1.so|66862f5cc9fd096840545fc3654f2830
 vendor/lib/libuiblur.so|12dd942092c05d978a2a2db3ea37e0b410427b52
 
 # Graphics firmware
