@@ -56,7 +56,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libshim_atomic \
     camera.msm8974 \
     libxml2 \
     Snap \
@@ -276,6 +275,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
+
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_symbols
 
 # Misc dependency packages
 PRODUCT_PACKAGES += \
