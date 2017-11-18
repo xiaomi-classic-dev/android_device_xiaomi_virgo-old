@@ -507,7 +507,7 @@ etc/firmware/venus.mdt|a8a16453e83f32a4dd679e061f15071a4af33e39
 vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 
 # WiFi
-bin/wcnss_service|9506726df729e4691b6a46a1eb13b285cd4221c6
+bin/wcnss_service:vendor/bin/wcnss_service|9506726df729e4691b6a46a1eb13b285cd4221c6
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
