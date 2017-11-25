@@ -23,7 +23,6 @@ vendor/lib/libscve_stub.so|5eba058f976efd08ec626c44ab223cc83c2b03b1
 # Audio
 lib/soundfx/libdirac.so|df1c5278273cd313e02037601413e258ab1c120d
 lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
-vendor/etc/audio_policy.conf|425f8d7206677d4c8d5635e55ad80b2a11251b6e
 vendor/lib/libacdbloader.so|4f486a360aad554402c33587adb71bfae4a3ce31
 vendor/lib/libacdbrtac.so|3a7fb4be8278e9dd2af2fee448442d24f942c674
 vendor/lib/libadiertac.so|99fc3d5badf88b1738dfb6b0aa0ded734abdeb53
