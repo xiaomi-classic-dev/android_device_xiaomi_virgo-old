@@ -394,12 +394,8 @@ etc/firmware/a330_pm4.fw
 
 # Media
 lib/libOmxVdecHevc.so|b1f1198ea5109c69ab2a35d1f799a4ed68cad910
-vendor/lib/libDivxDrm.so|c65f0b52ea0604732433929381e48e6f89a292ae
 vendor/lib/libHevcSwDecoder.so|dbe15ee9d0863873d24dffcd9f4a520a985876c0
-vendor/lib/libI420colorconvert.so|8b2fc81122ca24ad70dde1a370eff552eea3b857
-vendor/lib/libmm-color-convertor.so|08aef70b271e07f31dff7f89d9391ae39269a6c3
 vendor/lib/libmmosal.so|838e8f778f31221b06260f5944d8cbab80893343
-vendor/lib/libSHIMDivxDrm.so|48bc5c12fbd8068f6df2700d912da115532a15d6
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxEvrcDec.so
