@@ -162,9 +162,6 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 # Use HW crypto for ODE
 TARGET_HW_DISK_ENCRYPTION := true
 
-# Keymaster
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
-
 # Simple time service client
 BOARD_USES_QC_TIME_SERVICES := true
 
