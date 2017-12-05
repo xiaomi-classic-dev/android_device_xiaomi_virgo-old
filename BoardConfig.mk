@@ -179,10 +179,11 @@ ifeq ($(HOST_OS),linux)
 endif
 DONT_DEXPREOPT_PREBUILTS := true
 
-# SELinux policies
 # qcom sepolicy
-#include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/legacy-sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 
+# SELinux policies
 #BOARD_SEPOLICY_DIRS += \
 #        $(LOCAL_PATH)/sepolicy
 
