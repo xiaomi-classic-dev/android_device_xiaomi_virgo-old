@@ -467,11 +467,11 @@ vendor/lib/lib-rtpsl.so
 vendor/qcril.db|f46b096ac207f460794f405f5cf8eb61196d2343
 
 # Sensors
-bin/sensorextd|96b65ee423c1dbcd59a37be1cfe9f48239c88992
 bin/sensors.qcom|afddd3514ccdd2474ae3f4caa3771337ddac697c
 etc/sensor_def_qcomdev.conf|f209e786527214474921a2cd91c715386ab136a5
 etc/sensor_diag.cfg|bd2d2aabc609dce30f5c48dd566c3cc27cdd289f
-lib/hw/sensors.st_mve.so:vendor/lib/libsensors.st_mve.so|bfad63c0e04ddf6376ce9082d975fecfa0557817
+lib/hw/sensors.leo.so:vendor/lib/libsensors.leo.so|9e3c6d13435ccb198a52182ffb9083ca
+lib/libinvensense_hal.so|1f899184f3134ec96e695be5cfa99b3b
 vendor/lib/hw/activity_recognition.msm8974.so|6c58777fae1dddceb1ad38396d4f799d199db3ee
 vendor/lib/libasn1cper.so|503a3b4056f7342cbd0cd605f725c9a4140458c1
 vendor/lib/libasn1crt.so|45bf34728d837c304f2372842fd36a026383704b
