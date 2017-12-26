@@ -1240,6 +1240,68 @@
 /sys/devices/f9968000.i2c/i2c-12/12-0042/0018:0483:5702.0001/HID-SENSOR-2000e1.7/iio:device*    trigger/current_trigger                 0660    system  radio
 /sys/devices/f9968000.i2c/i2c-12/12-0042/0018:0483:5702.0001/HID-SENSOR-2000e1.7/iio:device*    uevent                                  0660    system  radio
 
+# sensor hub
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* debug_reg_dump 		0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* out_command			0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* in_data 			0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* misc_bin_dmp_firmware 	0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* misc_reset 			0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* name 			0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* buffer/enable 		0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* buffer/length 		0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* scan_elements/in_accel_type	0440 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* scan_elements/in_accel_index 0440 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* scan_elements/in_accel_en 	0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* trigger/current_trigger 	0600 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* in_accel_matrix 		0440 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* in_magn_matrix	 	0440 system system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device* in_anglvel_matrix 		0440 system system
+
+# activity recognition device
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_accel_batch_latency          0220    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_accel_fifo_length            0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_accel_flush                  0220    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_accel_offset                 0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_accel_raw                    0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_accel_scale                  0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_intensity_offset             0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_intensity_raw                0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_intensity_scale              0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_timestamp_offset             0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   in_timestamp_scale              0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   name                            0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_accel_en       0660    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_accel_index    0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_accel_type     0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_intensity_en   0660    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_intensity_index        0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_intensity_type 0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_timestamp_en   0660    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_timestamp_index        0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   scan_elements/in_timestamp_type 0440    system  system
+/sys/devices/f9968000.i2c/i2c-12/12-006b/iio:device*   trigger/current_trigger         0660    system  system
+
+/sys/devices/f9925000.i2c/i2c-4/4-0077/iio:device* buffer/enable                  0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0077/iio:device* buffer/length                  0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0077/iio:device* scan_elements/in_pressure_en   0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0077/iio:device* scan_elements/in_timestamp_en  0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0077/iio:device* in_pressure_scale              0600 system system
+
+#PL sensor
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* buffer/enable 			0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* buffer/length 			0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* scan_elements/in_in_en 	0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* scan_elements/in_custom_en 	0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* scan_elements/in_proximity_en 	0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* scan_elements/in_timestamp_en 	0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* scan_elements/in_illuminance_en 0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* in_illuminance_scale 		0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* in_proximity_offset 		0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* continus_mode 			0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* calibration_offset		0660 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* prox_thres_near 		0600 system system
+/sys/devices/f9925000.i2c/i2c-4/4-0060/iio:device* prox_thres_far 		0600 system system
+
 # cpufreq driver
 /sys/devices/system/cpu/cpu*    cpufreq/sys_cap_freq        0664    system    system
 /sys/devices/system/cpu/cpu*    cpufreq/thermal_cap_freq    0664    system    system
