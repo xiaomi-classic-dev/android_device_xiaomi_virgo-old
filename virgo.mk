@@ -266,9 +266,6 @@ PRODUCT_PACKAGES += \
     sensors.msm8974
 
 PRODUCT_PACKAGES += \
-    set_sensorprop.sh
-
-PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
 # Seccomp policy
