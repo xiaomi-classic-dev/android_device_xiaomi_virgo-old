@@ -252,8 +252,6 @@ on boot
     chown system system /sys/class/rtc/rtc0/wakealarm
     chmod 0666 /sys/class/rtc/rtc0/wakealarm
 
-    exec /system/bin/sh  /system/etc/set_sensorprop.sh
-
 # Enable manual network selection function and distinguish 2G/3G/4G
     setprop persist.radio.rat_on combine
 
@@ -910,12 +908,6 @@ service mmbn-daemon /system/bin/mmbn-daemon
 
 on property:persist.radio.modem=LTE-X5-ALL
     start mmbn-daemon
-
-service sensorext /system/bin/sensorextd
-    class late_start
-    user root
-    group root
-    disabled
 
 service sensorservice /system/bin/sensorservice
     class late_start
