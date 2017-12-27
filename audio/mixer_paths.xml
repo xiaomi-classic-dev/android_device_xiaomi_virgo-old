@@ -288,6 +288,18 @@
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="0" />
     <!-- afe-proxy end-->
     <ctl name="AFE_PCM_RX Port Mixer INTERNAL_FM_TX" value="0" />
+    <!-- HIFI -->
+    <ctl name="Volume" value="242" />
+    <ctl name="Automute Level" value="120" />
+    <ctl name="Filter Shape" value="Minimum Phase" />
+    <ctl name="DPLL DSD Bandwidth" value="1" />
+    <ctl name="DPLL I2S Bandwidth" value="1" />
+    <ctl name="THD Compensation" value="0" />
+    <ctl name="THD2 Compensation" value="255" />
+    <ctl name="THD3 Compensation" value="1" />
+    <ctl name="Custom Filter" value="OFF" />
+    <!-- Speaker Smart PA -->
+    <ctl name="Smartpa Preset" value="0" />
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="deep-buffer-playback">
@@ -302,7 +314,12 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
+    <path name="deep-buffer-playback hifi-headphones">
+        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+    </path>
+
     <path name="deep-buffer-playback speaker-and-headphones">
+        <path name="deep-buffer-playback hifi-headphones" />
         <path name="deep-buffer-playback speaker" />
         <path name="deep-buffer-playback" />
     </path>
@@ -359,7 +376,12 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
+    <path name="low-latency-playback hifi-headphones">
+        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+    </path>
+
     <path name="low-latency-playback speaker-and-headphones">
+        <path name="low-latency-playback hifi-headphones" />
         <path name="low-latency-playback speaker" />
         <path name="low-latency-playback" />
     </path>
@@ -415,7 +437,12 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
+    <path name="compress-offload-playback hifi-headphones">
+        <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+    </path>
+
     <path name="compress-offload-playback speaker-and-headphones">
+        <path name="compress-offload-playback hifi-headphones" />
         <path name="compress-offload-playback speaker" />
         <path name="compress-offload-playback" />
     </path>
@@ -492,6 +519,7 @@
     <path name="voice-call speaker">
         <ctl name="SEC_MI2S_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="1" />
+        <ctl name="Smartpa Preset" value="1" />
     </path>
 
     <path name="voice-call hdmi">
@@ -522,6 +550,7 @@
     <path name="voice2-call speaker">
         <ctl name="SEC_MI2S_RX_Voice Mixer Voice2" value="1" />
         <ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="1" />
+        <ctl name="Smartpa Preset" value="1" />
     </path>
 
     <path name="voice2-call hdmi">
@@ -962,6 +991,7 @@
         <ctl name="SLIM_0_RX Channels" value="Two" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RX2 MIX1 INP1" value="RX2" />
+        <ctl name="COMP1 Switch" value="1" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="RX1 Digital Volume" value="84" />
         <ctl name="RX2 Digital Volume" value="84" />
@@ -1006,18 +1036,7 @@
     </path>
 
     <path name="voice-headphones">
-        <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
-        <ctl name="SLIM RX2 MUX" value="AIF1_PB" />
-        <ctl name="SLIM_0_RX Channels" value="Two" />
-        <ctl name="RX1 MIX1 INP1" value="RX1" />
-        <ctl name="RX2 MIX1 INP1" value="RX2" />
-        <ctl name="COMP1 Switch" value="1" />
-        <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
-        <ctl name="RX1 Digital Volume" value="84" />
-        <ctl name="RX2 Digital Volume" value="84" />
-        <ctl name="HPHL DAC Switch" value="1" />
-        <ctl name="HPHL Volume" value="20" />
-        <ctl name="HPHR Volume" value="20" />
+        <path name="headphones" />
     </path>
 
     <path name="voice-headset-mic">
